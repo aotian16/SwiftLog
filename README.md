@@ -13,24 +13,24 @@ print like this:
 ``` swift
 //        1. use Log
         
-        Log.logLevel = LogLevel.Warn
+        Log.logLevel = LogLevel.Warn // print log over warn
         
-        Log.v("default v")
-        Log.d("default d")
-        Log.i("default i")
+        Log.v("default v") // will not print
+        Log.d("default d") // will not print
+        Log.i("default i") // will not print
         Log.w("default w")
         Log.e("default e")
         Log.a("default a")
         
 //        2. use custom log
         
-        let log = SwiftLog(logLevel: LogLevel.Warn)
+        let log = SwiftLog(logLevel: LogLevel.Warn) // print log over warn
         
         log.dateFormat = "[yyyy-MM-dd HH:mm:ss]"
         
-        log.v("custom v")
-        log.d("custom d")
-        log.i("custom i")
+        log.v("custom v") // will not print
+        log.d("custom d") // will not print
+        log.i("custom i") // will not print
         log.w("custom w")
         log.e("custom e")
         log.a("custom a")
