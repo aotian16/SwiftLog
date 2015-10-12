@@ -3,6 +3,12 @@ a simple swift log
 
 learn from [XCGLogger](https://github.com/DaveWoodCom/XCGLogger "XCGLogger")
 
+print like this:
+
+<pre>
+2015-10-12 15:03:25 /Users/xxx/Desktop/xcodeWorkspace/SwiftLogDemo/SwiftLogDemo/ViewController.swift : viewDidLoad() : 36 : 15 Assert message log
+</pre>
+
 # how to use
 ``` swift
 //        1. use Log
@@ -19,6 +25,8 @@ learn from [XCGLogger](https://github.com/DaveWoodCom/XCGLogger "XCGLogger")
 //        2. use custom log
         
         let log = SwiftLog(logLevel: LogLevel.Warn)
+        
+        log.dateFormat = "[yyyy-MM-dd HH:mm:ss]"
         
         log.v("custom v")
         log.d("custom d")
