@@ -13,6 +13,11 @@ public class SwiftLog {
     public var logLevel: LogLevel
     /// date format
     public var dateFormat: String = "yyyy-MM-dd HH:mm:ss"
+    {
+        didSet {
+            dateFormatter.dateFormat = dateFormat
+        }
+    }
     /// date formatter
     private var dateFormatter: NSDateFormatter = NSDateFormatter()
 

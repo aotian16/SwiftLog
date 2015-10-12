@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         
         let log = SwiftLog(logLevel: LogLevel.Warn)
         
+        log.dateFormat = "[yyyy-MM-dd HH:mm:ss]"
+        
         log.v("custom v")
         log.d("custom d")
         log.i("custom i")
