@@ -3,7 +3,7 @@ a simple swift log
 
 learn from [XCGLogger](https://github.com/DaveWoodCom/XCGLogger "XCGLogger")
 
-print like this:
+print message with file, function, line and column. like this:
 
 <pre>
 2015-10-12 15:03:25 /Users/xxx/Desktop/xcodeWorkspace/SwiftLogDemo/SwiftLogDemo/ViewController.swift : viewDidLoad() : 36 : 15 Assert message log
