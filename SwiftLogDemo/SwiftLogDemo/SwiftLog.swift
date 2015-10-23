@@ -12,7 +12,7 @@ public class SwiftLog {
     /// log level. Print logs which >= logLevel
     public var logLevel: LogLevel
     /// date format
-    public var dateFormat: String = "yyyy-MM-dd HH:mm:ss"
+    public var dateFormat: String = "yyyy-MM-dd HH:mm:ss.SSS"
     {
         didSet {
             dateFormatter.dateFormat = dateFormat
@@ -128,8 +128,13 @@ public class SwiftLog {
         }
         
         let date = dateFormatter.stringFromDate(NSDate())
+        let file = NSString(string: fileName).lastPathComponent
+        let fun = functionName
+        let line = lineNum
+        let col = columnNum
+        let lvl = logLevel
         
-        print("\(date) \(fileName) : \(functionName) : \(lineNum) : \(columnNum) \(logLevel) \(msg)")
+        print("\(date) \(file) : \(fun) : \(line) : \(col) \(lvl) \(msg)")
     }
 }
 

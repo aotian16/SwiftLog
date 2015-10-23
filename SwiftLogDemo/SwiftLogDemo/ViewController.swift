@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         
         let log = SwiftLog(logLevel: LogLevel.Warn) // print log over warn
         
-        log.dateFormat = "[yyyy-MM-dd HH:mm:ss]"
+        log.dateFormat = "[yyyy-MM-dd HH:mm:ss.SSS]"
         
         log.v("custom v") // will not print
         log.d("custom d") // will not print
