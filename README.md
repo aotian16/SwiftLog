@@ -8,7 +8,7 @@ print message with file, function, line and column. like this:
 
 <pre>
 
-2015-10-12 15:03:25.123 viewDidLoad() : 36 : 15 Assert message log
+2015-10-12 15:03:25.123 ViewController.swift : viewDidLoad() : 36 : 15 Assert message log
 
 </pre>
 
