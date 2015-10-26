@@ -42,7 +42,10 @@ print message with file, function, line and column. like this:
 
 # install
 
-just copy SwiftLog.swift, LogLevel.swift and Log.swift to your project.
+| No.  | type     | detail                                   |
+| ---- | -------- | ---------------------------------------- |
+| 1    | carthage | `github "aotian16/SwiftLog" ~> 1.0.0`    |
+| 2    | manual   | just copy SwiftLog.swift, LogLevel.swift and Log.swift to your project. |
 
 # requirements
 
