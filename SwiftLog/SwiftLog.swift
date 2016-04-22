@@ -42,7 +42,7 @@ public class SwiftLog {
     - parameter lineNum:      lineNum
     - parameter columnNum:    columnNum
     */
-    public func v(msg: String, fileName: String = __FILE__, functionName: String = __FUNCTION__, lineNum: Int = __LINE__, columnNum: Int = __COLUMN__) {
+    public func v(msg: String, fileName: String = #file, functionName: String = #function, lineNum: Int = #line, columnNum: Int = #column) {
         printLog(LogLevel.Verbose, msg: msg, fileName: fileName, functionName: functionName, lineNum: lineNum, columnNum: columnNum)
     }
     
@@ -55,7 +55,7 @@ public class SwiftLog {
     - parameter lineNum:      lineNum
     - parameter columnNum:    columnNum
     */
-    public func d(msg: String, fileName: String = __FILE__, functionName: String = __FUNCTION__, lineNum: Int = __LINE__, columnNum: Int = __COLUMN__) {
+    public func d(msg: String, fileName: String = #file, functionName: String = #function, lineNum: Int = #line, columnNum: Int = #column) {
         printLog(LogLevel.Debug, msg: msg, fileName: fileName, functionName: functionName, lineNum: lineNum, columnNum: columnNum)
     }
     
@@ -68,7 +68,7 @@ public class SwiftLog {
     - parameter lineNum:      lineNum
     - parameter columnNum:    columnNum
     */
-    public func i(msg: String, fileName: String = __FILE__, functionName: String = __FUNCTION__, lineNum: Int = __LINE__, columnNum: Int = __COLUMN__) {
+    public func i(msg: String, fileName: String = #file, functionName: String = #function, lineNum: Int = #line, columnNum: Int = #column) {
         printLog(LogLevel.Info, msg: msg, fileName: fileName, functionName: functionName, lineNum: lineNum, columnNum: columnNum)
     }
     
@@ -81,7 +81,7 @@ public class SwiftLog {
     - parameter lineNum:      lineNum
     - parameter columnNum:    columnNum
     */
-    public func w(msg: String, fileName: String = __FILE__, functionName: String = __FUNCTION__, lineNum: Int = __LINE__, columnNum: Int = __COLUMN__) {
+    public func w(msg: String, fileName: String = #file, functionName: String = #function, lineNum: Int = #line, columnNum: Int = #column) {
         printLog(LogLevel.Warn, msg: msg, fileName: fileName, functionName: functionName, lineNum: lineNum, columnNum: columnNum)
     }
     
@@ -94,7 +94,7 @@ public class SwiftLog {
     - parameter lineNum:      lineNum
     - parameter columnNum:    columnNum
     */
-    public func e(msg: String, fileName: String = __FILE__, functionName: String = __FUNCTION__, lineNum: Int = __LINE__, columnNum: Int = __COLUMN__) {
+    public func e(msg: String, fileName: String = #file, functionName: String = #function, lineNum: Int = #line, columnNum: Int = #column) {
         printLog(LogLevel.Error, msg: msg, fileName: fileName, functionName: functionName, lineNum: lineNum, columnNum: columnNum)
     }
     
@@ -107,7 +107,7 @@ public class SwiftLog {
     - parameter lineNum:      lineNum
     - parameter columnNum:    columnNum
     */
-    public func a(msg: String, fileName: String = __FILE__, functionName: String = __FUNCTION__, lineNum: Int = __LINE__, columnNum: Int = __COLUMN__) {
+    public func a(msg: String, fileName: String = #file, functionName: String = #function, lineNum: Int = #line, columnNum: Int = #column) {
         printLog(LogLevel.Assert, msg: msg, fileName: fileName, functionName: functionName, lineNum: lineNum, columnNum: columnNum)
     }
     
@@ -122,7 +122,7 @@ public class SwiftLog {
     - parameter lineNum:      lineNum
     - parameter columnNum:    columnNum
     */
-    public func printLog(logLevel: LogLevel, msg: String, fileName: String = __FILE__, functionName: String = __FUNCTION__, lineNum: Int = __LINE__, columnNum: Int = __COLUMN__) {
+    public func printLog(logLevel: LogLevel, msg: String, fileName: String = #file, functionName: String = #function, lineNum: Int = #line, columnNum: Int = #column) {
         if self.logLevel > logLevel {
             return
         }

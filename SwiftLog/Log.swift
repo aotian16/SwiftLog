@@ -27,7 +27,7 @@ public class Log {
     - parameter lineNum:      lineNum
     - parameter columnNum:    columnNum
     */
-    class public func v(msg: String, fileName: String = __FILE__, functionName: String = __FUNCTION__, lineNum: Int = __LINE__, columnNum: Int = __COLUMN__) {
+    class public func v(msg: String, fileName: String = #file, functionName: String = #function, lineNum: Int = #line, columnNum: Int = #column) {
         sharedLogInstance.printLog(LogLevel.Verbose, msg: msg, fileName: fileName, functionName: functionName, lineNum: lineNum, columnNum: columnNum)
     }
     
@@ -40,7 +40,7 @@ public class Log {
     - parameter lineNum:      lineNum
     - parameter columnNum:    columnNum
     */
-    class public func d(msg: String, fileName: String = __FILE__, functionName: String = __FUNCTION__, lineNum: Int = __LINE__, columnNum: Int = __COLUMN__) {
+    class public func d(msg: String, fileName: String = #file, functionName: String = #function, lineNum: Int = #line, columnNum: Int = #column) {
         sharedLogInstance.printLog(LogLevel.Debug, msg: msg, fileName: fileName, functionName: functionName, lineNum: lineNum, columnNum: columnNum)
     }
     
@@ -53,7 +53,7 @@ public class Log {
     - parameter lineNum:      lineNum
     - parameter columnNum:    columnNum
     */
-    class public func i(msg: String, fileName: String = __FILE__, functionName: String = __FUNCTION__, lineNum: Int = __LINE__, columnNum: Int = __COLUMN__) {
+    class public func i(msg: String, fileName: String = #file, functionName: String = #function, lineNum: Int = #line, columnNum: Int = #column) {
         sharedLogInstance.printLog(LogLevel.Info, msg: msg, fileName: fileName, functionName: functionName, lineNum: lineNum, columnNum: columnNum)
     }
     
@@ -66,7 +66,7 @@ public class Log {
     - parameter lineNum:      lineNum
     - parameter columnNum:    columnNum
     */
-    class public func w(msg: String, fileName: String = __FILE__, functionName: String = __FUNCTION__, lineNum: Int = __LINE__, columnNum: Int = __COLUMN__) {
+    class public func w(msg: String, fileName: String = #file, functionName: String = #function, lineNum: Int = #line, columnNum: Int = #column) {
         sharedLogInstance.printLog(LogLevel.Warn, msg: msg, fileName: fileName, functionName: functionName, lineNum: lineNum, columnNum: columnNum)
     }
     
@@ -79,7 +79,7 @@ public class Log {
     - parameter lineNum:      lineNum
     - parameter columnNum:    columnNum
     */
-    class public func e(msg: String, fileName: String = __FILE__, functionName: String = __FUNCTION__, lineNum: Int = __LINE__, columnNum: Int = __COLUMN__) {
+    class public func e(msg: String, fileName: String = #file, functionName: String = #function, lineNum: Int = #line, columnNum: Int = #column) {
         sharedLogInstance.printLog(LogLevel.Error, msg: msg, fileName: fileName, functionName: functionName, lineNum: lineNum, columnNum: columnNum)
     }
     
@@ -92,7 +92,7 @@ public class Log {
     - parameter lineNum:      lineNum
     - parameter columnNum:    columnNum
     */
-    class public func a(msg: String, fileName: String = __FILE__, functionName: String = __FUNCTION__, lineNum: Int = __LINE__, columnNum: Int = __COLUMN__) {
+    class public func a(msg: String, fileName: String = #file, functionName: String = #function, lineNum: Int = #line, columnNum: Int = #column) {
         sharedLogInstance.printLog(LogLevel.Assert, msg: msg, fileName: fileName, functionName: functionName, lineNum: lineNum, columnNum: columnNum)
     }
 }
