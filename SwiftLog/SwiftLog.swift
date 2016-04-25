@@ -9,6 +9,8 @@
 import Foundation
 
 public class SwiftLog {
+    /// how to log
+    public var howToLog: ((logLevel: LogLevel, msg: String, fileName: String, functionName: String, lineNum: Int, columnNum: Int) -> Void)?
     /// log level. Print logs which >= logLevel
     public var logLevel: LogLevel
     /// date format
@@ -112,8 +114,8 @@ public class SwiftLog {
     }
     
     /**
-    print log.
-    If you want to custom log format, change this function.
+    execute log.
+    If you want to custom log format, change howToLog.
     
     - parameter logLevel:     logLevel
     - parameter msg:          msg
@@ -134,7 +136,11 @@ public class SwiftLog {
         let col = columnNum
         let lvl = logLevel
         
-        print("\(date) \(file) : \(fun) : \(line) : \(col) \(lvl) \(msg)")
+        if let h = howToLog {
+            h(logLevel: lvl, msg: msg, fileName: file, functionName: fun, lineNum: line, columnNum: col)
+        } else {
+            print("\(date) \(file) : \(fun) : \(line) : \(col) \(lvl) \(msg)")
+        }
     }
 }
 
