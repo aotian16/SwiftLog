@@ -18,6 +18,7 @@ print message with file, function, line and column. like this:
 //        1. use Log
 
         Log.logLevel = LogLevel.Warn // print log over warn
+		Log.sharedLogInstance.dateFormat = "[yyyy-MM-dd HH:mm:ss.SSS]"
 
         Log.v("default v") // will not print
         Log.d("default d") // will not print
@@ -30,7 +31,9 @@ print message with file, function, line and column. like this:
 
         let log = SwiftLog(logLevel: LogLevel.Warn) // print log over warn
 
-        log.dateFormat = "[yyyy-MM-dd HH:mm:ss.SSS]"
+        log.howToLog = {(logLevel: LogLevel, msg: String, fileName: String, functionName: String, lineNum: Int, columnNum: Int) -> Void in
+            print(msg)
+        }
 
         log.v("custom v") // will not print
         log.d("custom d") // will not print
